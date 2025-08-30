@@ -1,9 +1,9 @@
-# Copyright 1999-2023 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{10..12} )
+PYTHON_COMPAT=( pypy3_11 python3_{11..14} )
 DISTUTILS_USE_PEP517=poetry
 inherit distutils-r1 pypi
 
@@ -19,7 +19,7 @@ RESTRICT="!test? ( test )"
 # missing DOCS="README.md"
 
 RDEPEND="cli? (
-			  >=dev-python/jinja-3.0.3[${PYTHON_USEDEP}]
+			  >=dev-python/jinja2-3.0.3[${PYTHON_USEDEP}]
 			  >=dev-python/click-8.0.3[${PYTHON_USEDEP}]
 			  >=dev-python/terminaltables-3.1.10[${PYTHON_USEDEP}]
 			  )"
